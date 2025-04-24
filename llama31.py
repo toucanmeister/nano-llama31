@@ -647,8 +647,8 @@ class DistributedShardedDataLoader:
 # int main
 
 def main(
-    ckpt_dir: str = "llama-models/models/llama3_1/Meta-Llama-3.1-8B",
-    tokenizer_path: str = "llama-models/models/llama3_1/Meta-Llama-3.1-8B/tokenizer.model",
+    ckpt_dir: str = "../../llamas/Llama3.1-8B",
+    tokenizer_path: str = "../../llamas/Llama3.1-8B/tokenizer.model",
     temperature: float = 1.0,
     top_p: float = 0.9,
     max_seq_len: int = 256,
@@ -659,7 +659,7 @@ def main(
 
     # load the val data shard
     data_loader = DistributedShardedDataLoader(
-        filename_pattern="tinystories/*_val.bin",
+        filename_pattern="../../llamas/tinystories/*_val.bin",
         B=max_batch_size,
         T=max_seq_len,
         process_rank=0,

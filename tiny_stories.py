@@ -139,6 +139,6 @@ def tokenize(tokenizer_path):
 
 if __name__ == "__main__":
     DATA_CACHE_DIR = os.path.join(os.path.dirname(__file__), "tinystories")
-    tokenizer_path = "llama-models/models/llama3_1/Meta-Llama-3.1-8B/tokenizer.model"
+    tokenizer_path = "../../llamas/Llama3.1-8B/tokenizer.model"
     download()
     tokenize(tokenizer_path)
